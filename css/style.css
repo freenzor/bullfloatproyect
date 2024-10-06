@@ -1,0 +1,505 @@
+/********** Template CSS **********/
+:root {
+    --primary: #fd6017;
+    --secondary: #FDBE33;
+    --light: #f4f6f8c5;
+    --dark: #040F28;
+    
+}
+
+
+/* estilos VIDEOS*/
+
+
+/* Estilos Generales */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f5f5f5;
+}
+
+h1, h4 {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilo de Títulos y Textos */
+h1.display-5 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+}
+
+h1 span.text-primary {
+    color: #ff6600; /* Naranja corporativo */
+}
+
+h4.text-uppercase {
+    color: #666;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Botón Principal */
+.btn-primary {
+    background-color: #ff6600; /* Naranja corporativo */
+    border: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    background-color: #e65500; /* Naranja más oscuro en hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo de las Cajas de Servicio */
+.service-box {
+    overflow: hidden;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+    cursor: pointer; /* Cambio de cursor */
+}
+
+.service-box:hover {
+    border: 1px solid #ff6600; /* Resaltar borde en naranja */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra leve en hover */
+}
+
+/* Estilo del Texto Superpuesto */
+.service-text {
+    padding: 15px;
+    color: #333;
+    border-top: 4px solid #ff6600; /* Borde superior en naranja */
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.service-text h4 {
+    color: #333;
+    font-weight: 600;
+}
+
+.service-text p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* Sección de Reseñas */
+.bg-dark {
+    background: #333;
+    color: #fff;
+}
+
+.bg-dark .text-primary {
+    color: #ff6600; /* Naranja corporativo */
+}
+
+.bg-light {
+    background: #f8f9fa;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.bg-light:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Sección de Reseñas */
+.bg-light p.fw-normal {
+    font-style: italic;
+    font-size: 1rem;
+}
+
+.bg-light h5 {
+    font-weight: 600;
+}
+
+.bg-light span {
+    color: #666;
+}
+
+/* Botones de Redes Sociales */
+a.btn {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a.btn:hover {
+    color: #ff6600;
+    transform: translateY(-2px);
+}
+
+/* Detalles de Diseño para Textos */
+.text-uppercase {
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.display-5.text-uppercase {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.text-primary {
+    color: #ff6600 !important;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    h1.display-5 {
+        font-size: 2.2rem;
+    }
+
+    .container-fluid {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .service-text {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Contenedor del logotipo en el footer para mantener alineación y estructura */
+.footer-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: start; /* Alinea a la izquierda dentro de la columna */
+    max-height: 80px; /* Limita la altura del contenedor */
+    overflow: hidden; /* Evita que la imagen desborde el contenedor */
+    margin-bottom: 45px; /* Añade espacio inferior para separación */
+}
+
+/* Estilos para la imagen del logotipo en el footer */
+.footer-logo-image {
+    max-width: 450px; /* Define el ancho máximo para la imagen */
+    max-height: 450px; /* Define la altura máxima para que encaje en el footer */
+    width: auto; /* Mantiene la proporción del ancho */
+    height: auto; /* Mantiene la proporción de la altura */
+    object-fit: contain; /* Escala la imagen para ajustarse al contenedor sin distorsionarse */
+    opacity: 0.9; /* Ajusta la transparencia para visibilidad */
+    border-radius: 5px; /* Bordes redondeados para un acabado consistente */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transiciones suaves para efectos */
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .footer-logo-container {
+        max-height: 60px; /* Ajusta la altura del contenedor en pantallas pequeñas */
+    }
+
+    .footer-logo-image {
+        max-width: 100px; /* Ajusta el ancho máximo en pantallas pequeñas */
+        max-height: 50px; /* Ajusta la altura máxima en pantallas pequeñas */
+    }
+}
+/* Contenedor del logotipo para mantener alineación y estructura */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 70px; /* Ajusta la altura máxima para la barra de navegación */
+    overflow: hidden; /* Evita que la imagen desborde el contenedor */
+}
+
+/* Estilos para la imagen del logotipo */
+.logo-image {
+    max-width: 300px; /* Limita el ancho máximo para no afectar la barra de navegación */
+    max-height: 500px; /* Limita la altura máxima para encajar bien en la barra */
+    width: auto; /* Mantiene la proporción del ancho */
+    height: auto; /* Mantiene la proporción de la altura */
+    object-fit: contain; /* Asegura que la imagen se ajuste sin distorsionarse */
+    padding: 0px; /* No agrega espacio alrededor de la imagen */
+    opacity: 20 ; /* Ajusta la transparencia para visibilidad */
+    border-radius: 5px; /* Bordes redondeados para un acabado elegante */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transiciones suaves para efectos */
+}
+/* Efecto de hover para un toque interactivo */
+.logo-image:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el ratón */
+    opacity: 1; /* Hace la imagen completamente opaca al pasar el ratón */
+}
+
+
+.pt-6 {
+    padding-top: 90px;
+}
+
+.pb-6 {
+    padding-bottom: 90px;
+}
+
+.py-6 {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.btn {
+    position: relative;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+.btn::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 5px;
+    bottom: -1px;
+    left: 50%;
+    background: var(--primary);
+    transition: .5s;
+}
+
+.btn.btn-primary::after {
+    background: var(--dark);
+}
+
+.btn:hover::after,
+.btn.active::after {
+    width: 50%;
+    left: 25%;
+}
+
+.btn-primary {
+    color: #FFFFFF;
+}
+
+.btn-square {
+    width: 36px;
+    height: 36px;
+}
+
+.btn-sm-square {
+    width: 28px;
+    height: 28px;
+}
+
+.btn-lg-square {
+    width: 46px;
+    height: 46px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    left: 50%;
+    bottom: 0;
+    margin-left: -22px;
+    border-radius: 0;
+    z-index: 99;
+}
+
+.bg-dark-radial {
+    background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) 1px, transparent 1px, transparent 100%);
+    background-image: -moz-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) 1px, transparent 1px, transparent 100%);
+    background-image: -ms-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) 1px, transparent 1px, transparent 100%);
+    background-image: -o-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) 1px, transparent 1px, transparent 100%);
+    background-image: repeating-radial-gradient(center center, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) 1px, transparent 1px, transparent 100%);
+    background-size: 3px 3px;
+}
+
+.bg-light-radial {
+    background-image: -webkit-repeating-radial-gradient(center center, rgba(256, 256, 256, 0.2), rgba(256, 256, 256, 0.2) 1px, transparent 1px, transparent 100%);
+    background-image: -moz-repeating-radial-gradient(center center, rgba(256, 256, 256, 0.2), rgba(256, 256, 256, 0.2) 1px, transparent 1px, transparent 100%);
+    background-image: -ms-repeating-radial-gradient(center center, rgba(256, 256, 256, 0.2), rgba(256, 256, 256, 0.2) 1px, transparent 1px, transparent 100%);
+    background-image: -o-repeating-radial-gradient(center center, rgba(256, 256, 256, 0.2), rgba(256, 256, 256, 0.2) 1px, transparent 1px, transparent 100%);
+    background-image: repeating-radial-gradient(center center, rgba(256, 256, 256, 0.2), rgba(256, 256, 256, 0.2) 1px, transparent 1px, transparent 100%);
+    background-size: 3px 3px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    position: relative;
+    padding: 35px 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--light);
+    outline: none;
+    transition: .5s;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+    .navbar-dark .navbar-nav .nav-link  {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+}
+
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(4, 15, 40, .7);
+    z-index: 1;
+}
+
+@media (max-width: 576px) {
+    .carousel-caption h4 {
+        font-size: 18px;
+        font-weight: 500 !important;
+    }
+
+    .carousel-caption h1 {
+        font-size: 30px;
+        font-weight: 600 !important;
+    }
+}
+
+.page-header {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(4, 15, 40, .7), rgba(4, 15, 40, .7)), url(../img/carousel-1.png) center center no-repeat;
+    background-size: cover;
+}
+
+.service-item .service-icon {
+    margin-top: -50px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+}
+
+.service-item .service-icon i {
+    transition: .2s;
+}
+
+.service-item:hover .service-icon i {
+    font-size: 60px;
+}
+
+.portfolio-item {
+    margin-bottom: 60px;
+}
+
+.portfolio-title {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 120px;
+    padding: 0 30px;
+    right: 30px;
+    left: 30px;
+    bottom: -60px;
+    background: #FFFFFF;
+    z-index: 3;
+}
+
+.portfolio-btn {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    margin-top: -60px;
+    margin-left: -60px;
+    font-size: 120px;
+    line-height: 0;
+    transition: .1s;
+    transition-delay: .3s;
+    z-index: 2;
+    opacity: 0;
+}
+
+.portfolio-item:hover .portfolio-btn {
+    opacity: 1;
+}
+
+.portfolio-box::before,
+.portfolio-box::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    transition: .5s;
+    z-index: 1;
+    background: rgba(4, 15, 40, .7);
+}
+
+.portfolio-box::before {
+    left: 0;
+}
+
+.portfolio-box::after {
+    right: 0;
+}
+
+.portfolio-item:hover .portfolio-box::before {
+    left: 0;
+    width: 50%;
+}
+
+.portfolio-item:hover .portfolio-box::after {
+    right: 0;
+    width: 50%;
+}
+
+@media (min-width: 992px) {
+    .testimonial,
+    .contact-form {
+        margin-left: -90px;
+    }
+}
+
+@media (min-width: 992px) {
+    .footer::after {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 100%;
+        top: 0;
+        left: 50%;
+        background: var(--primary)
+    }
+}
+
+.footer-shape::before {
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 100%;
+    top: 0;
+    left: -40px;
+    background: var(--primary);
+    transform: skew(40deg);
+}
+/* Media Queries para mantener la responsividad en diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+    .logo-container {
+        max-height: 60px; /* Ajusta la altura para pantallas más pequeñas */
+    }
+
+    .logo-image {
+        max-width: 120px; /* Reduce el tamaño máximo del logotipo en pantallas pequeñas */
+    }
+}
