@@ -6,6 +6,30 @@
     --dark: #040F28;
     
 }
+/* estilos  SERV. VENTAS ARRIENDO*/
+
+.custom-btn {
+    background-color: #f26522;  /* Color naranja */
+    color: black;  /* Texto en negro */
+    font-size: 24px;  /* Tamaño de letra ajustado */
+    font-weight: bold;  /* Negrita */
+    padding: 15px 30px;  /* Espaciado interno */
+    border: none;  /* Sin borde */
+    text-transform: uppercase;  /* Texto en mayúsculas */
+    width: 250px;  /* Ancho de botón */
+    text-align: center;  /* Centrar el texto */
+    border-radius: 5px;  /* Bordes ligeramente redondeados */
+    transition: background-color 0.3s ease;  /* Animación suave al hover */
+}
+
+.custom-btn:hover {
+    background-color: #d9541e;  /* Naranja más oscuro en hover */
+    color: white;  /* Texto blanco al hacer hover */
+}
+
+.custom-btn:focus {
+    outline: none;  /* Elimina el borde de enfoque */
+}
 
 
 /* estilos VIDEOS*/
