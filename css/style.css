@@ -4,13 +4,68 @@
     --secondary: #FDBE33;
     --light: #f4f6f8c5;
     --dark: #040F28;
-    
+     
 }
+
+
+/* Estilos Personalizados (Con Colores Corporativos) */
+/* Estilos Personalizados (Con Colores Corporativos) */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white; /* Fondo de tarjeta en blanco */
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background-color: var(--primary); /* Color primario corporativo */
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary); /* Oscurecer en hover */
+}
+
+.modal-header {
+    border-bottom: 2px solid var(--primary);
+    background-color: var(--primary);
+    color: white; /* Títulos de modales en blanco */
+}
+
+.modal-header .btn-close {
+    background-color: transparent;
+    border: none;
+}
+
+.btn-close:hover {
+    background-color: white(255, 255, 255, 0.2);
+}
+
+.modal-content {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Ajustes tipográficos */
+.modal-title {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+h5 {
+    color: var(--primary); /* Color de subtítulos */
+}
+
+
 /* estilos  SERV. VENTAS ARRIENDO*/
 
 .custom-btn {
     background-color: #f26522;  /* Color naranja */
-    color: black;  /* Texto en negro */
+    color: white;  /* Texto en negro */
     font-size: 24px;  /* Tamaño de letra ajustado */
     font-weight: bold;  /* Negrita */
     padding: 15px 30px;  /* Espaciado interno */
