@@ -8,64 +8,163 @@
 }
 
 
-/* Estilos Personalizados (Con Colores Corporativos) */
-/* Estilos Personalizados (Con Colores Corporativos) */
-.card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: white; /* Fondo de tarjeta en blanco */
+
+/* Modal general */
+.modal-content {
+    background: var(--dark); /* Fondo blanco sólido para todo el modal */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0px 15px 30px #00000033; /* Sombra suave */
 }
 
-.card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+/* Área de la descripción dentro del modal (modal-body) */
+
+/* Cambiar el color del título en los modales */
+.modal-title {
+    color: var(--light); /* Cambia este valor por el color que desees */
+    font-size: 1.8rem; /* Ajusta el tamaño si lo deseas */
+    font-weight: bold; /* Para hacer que el título sea más fuerte */
 }
 
-.btn-primary {
-    background-color: var(--primary); /* Color primario corporativo */
-    border: none;
+.modal-body {
+    background: white; /* Fondo semi-transparente */
+    padding: 20px;
+    border-radius: 12px; /* Bordes redondeados para la sección interna */
+    box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra interna */
+}
+
+/* Texto en el modal */
+.modal-body h5 {
+    font-size: 1.5rem;
+    color: #333; /* Color oscuro */
+    margin-bottom: 10px;
+}
+
+.modal-body p, .modal-body ul {
+    font-size: 1.1rem;
+    color: #666; /* Texto más claro */
+}
+
+.modal-body ul {
+    padding-left: 20px;
+}
+
+.modal-body ul li {
+    margin-bottom: 8px;
+}
+
+/* Transición del fondo oscuro del modal */
+.modal-backdrop.show {
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro con mayor transparencia */
+}
+
+/* Botón de cierre del modal */
+.modal-header .btn-close {
+    background-color: var(--primary); /* Botón de cierre con color vibrante */
+    border-radius: 50%; /* Circular */
+    opacity: 0.7; /* Un poco transparente */
+}
+
+.modal-header .btn-close:hover {
+    opacity: 1; /* Aumenta la opacidad al hacer hover */
+}
+
+/* Botón de acción dentro del modal */
+.modal-body .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
     transition: background-color 0.3s ease;
 }
 
-.btn-primary:hover {
-    background-color: var(--primary); /* Oscurecer en hover */
+.modal-body .btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px); /* Efecto en el hover */
 }
 
-.modal-header {
-    border-bottom: 2px solid var(--primary);
-    background-color: var(--primary);
-    color: white; /* Títulos de modales en blanco */
-}
-
-.modal-header .btn-close {
-    background-color: transparent;
-    border: none;
-}
-
-.btn-close:hover {
-    background-color: white(255, 255, 255, 0.2);
-}
-
-.modal-content {
-    border-radius: 8px;
+/* Estilos personalizados (Con colores corporativos) */
+/* Servicio */
+.service-item {
+    position: relative;
+    border-radius: 12px;
     overflow: hidden;
 }
 
-/* Ajustes tipográficos */
-.modal-title {
-    font-weight: 700;
-    font-size: 1.3rem;
+.service-item img {
+    transition: transform 0.5s ease;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 
-h5 {
-    color: var(--primary); /* Color de subtítulos */
+.service-item:hover img {
+    transform: scale(1.1); /* Efecto de zoom en la imagen */
 }
 
+.service-text {
+    padding: 20px;
+    background: white;
+    z-index: 1;
+}
 
-/* estilos  SERV. VENTAS ARRIENDO*/
+.service-text h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+}
 
+.service-text p {
+    color: #6c757d;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Fondo oscuro */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.service-item:hover .overlay {
+    opacity: 1; /* Mostrar overlay al hacer hover */
+}
+
+.overlay-content {
+    color: white;
+    text-align: center;
+}
+
+.overlay-content h4 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.overlay-content p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.overlay-content .btn {
+    background-color: var(--primary);
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.overlay-content .btn:hover {
+    background-color: --;
+}
+
+/* Estilos para los botones personalizados de ventas/arriendo */
 .custom-btn {
-    background-color: #f26522;  /* Color naranja */
-    color: white;  /* Texto en negro */
+    background-color: var(--primary);  /* Color naranja */
+    color: white;  /* Texto en blanco */
     font-size: 24px;  /* Tamaño de letra ajustado */
     font-weight: bold;  /* Negrita */
     padding: 15px 30px;  /* Espaciado interno */
@@ -78,7 +177,7 @@ h5 {
 }
 
 .custom-btn:hover {
-    background-color: #d9541e;  /* Naranja más oscuro en hover */
+    background-color: var(--primary);  /* Naranja más oscuro en hover */
     color: white;  /* Texto blanco al hacer hover */
 }
 
@@ -140,7 +239,7 @@ p {
     border-radius: 8px;
     background: #fff;
     border: 1px solid #ddd;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px rgba(253, 5, 5, 0.05);
     transition: box-shadow 0.3s ease, border 0.3s ease;
     cursor: pointer; /* Cambio de cursor */
 }
@@ -246,6 +345,59 @@ a.btn:hover {
         font-size: 0.9rem;
     }
 }
+
+/* inicio seccion servicios*/
+.img-fluid {
+    width: 100%; /* Se ajusta al ancho completo del contenedor */
+    max-height: 600px; /* Limita la altura máxima para evitar imágenes muy grandes */
+    object-fit: cover; /* Asegura que la imagen cubra su contenedor correctamente */
+    border-radius: 10px; /* Bordes redondeados para un look más suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para dar profundidad */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transición suave en hover */
+    margin-bottom: 20px; /* Espacio inferior para separar del contenido */
+    filter: brightness(1.1); /* Leve incremento en brillo para hacerlo más llamativo */
+
+}
+
+.img-fluid:hover {
+    transform: scale(1.05); /* Ligero zoom al pasar el cursor */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más intensa en hover */
+    filter: brightness(1.1); /* Leve incremento en brillo para hacerlo más llamativo */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.img-fluid {
+    animation: fadeIn 0.6s ease-in-out; /* Efecto de aparición suave al cargar la página */
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: rgb(7, 6, 6);
+    background-color:var(--primary); /* Color del botón */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--primary); /* Color más oscuro al pasar el cursor */
+}
+
+.btn:active {
+    background-color: var(--primary); /* Color al hacer clic */
+}
+/* Fin seccion servicios */
+
+
 
 
 /* Contenedor del logotipo en el footer para mantener alineación y estructura */
@@ -448,8 +600,70 @@ a.btn:hover {
     }
 }
 
+.page-header-services {
+    height: 250px;
+    font-size: 36px; /* Corrected font-size (removed extra space before 'px') */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(4, 15, 40, 0.5), rgba(4, 15, 40, 0.5)), 
+                url(../img/) center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Ensure background stays in place while scrolling */
+    image-rendering: optimizeQuality; /* Improves image quality rendering */
+    -webkit-background-size: cover; /* Ensures compatibility across browsers */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds subtle shadow */
+    color: white; /* Ensure the text is clearly visible */
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px; /* Slight rounding of corners for a softer look */
+    transition: all 0.3s ease-in-out; /* Adds smooth transition effect */
+}
+
+.page-header-services:hover {
+    background: linear-gradient(rgba(4, 15, 40, 0.3), rgba(4, 15, 40, 0.3)), 
+                url(../img/) center center no-repeat;
+    background-size: cover;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhances shadow on hover */
+}
+
+.page-header-services h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Adds spacing between letters */
+    margin: 0;
+    animation: fadeIn 1s ease-in-out; /* Simple fade-in animation */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds text shadow for readability */
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
 .page-header {
-    height: 300px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
